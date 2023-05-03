@@ -2,5 +2,11 @@
   box-sizing: border-box;
 }
 
+#root {
+  width: 90%;
+  margin: 20px auto;
+  max-width: 1125px;
+}
+
 
 

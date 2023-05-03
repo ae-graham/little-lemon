@@ -1,15 +1,17 @@
 import '../css/Homepage.css'
-import Header from './Header';
 import Nav from './Nav';
 import Footer from './Footer';
 import Specials from './Specials'
 import Hero from './Hero'
+import {ReactComponent as Logo} from '../assets/Logo.svg';
 
 const Homepage = () => {
     return (
         <>
-            <Header />
-            <Nav />
+            <header className='header'>
+                <Logo />
+                <Nav />
+            </header>
             <Hero />
             <Specials />
             <Footer />

@@ -1,6 +1,20 @@
+nav {
+    font-family: 'Karla', sans-serif;
+}
+
 ul {
+    font-size: 1.5rem;
     list-style-type: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    display: inline;
+    margin-left: 20px;
+    color: black;
 }
 
 a {

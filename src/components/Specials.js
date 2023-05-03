@@ -1,7 +1,11 @@
+import {Link} from 'react-router-dom';
 
 const Specials = () => {
     return (
-        <div></div>
+        <section>
+            <h2>This week's specials!</h2>
+            <Link to='/#'>Online Menu</Link>
+        </section>
     )
 }
 
