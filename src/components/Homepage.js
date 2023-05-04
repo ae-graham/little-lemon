@@ -5,7 +5,7 @@ import Specials from './Specials'
 import Hero from './Hero'
 import {ReactComponent as Logo} from '../assets/Logo.svg';
 
-const Homepage = () => {
+const Homepage = (props) => {
     return (
         <>
             <header className='header'>
@@ -13,7 +13,7 @@ const Homepage = () => {
                 <Nav />
             </header>
             <Hero />
-            <Specials />
+            <Specials specials={props.specials}/>
             <Footer />
         </>
     )
