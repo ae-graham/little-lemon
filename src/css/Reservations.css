@@ -1,0 +1,15 @@
+form {
+  font-family: 'Karla', sans-serif;
+  width: 90%;
+  margin: 70px auto 0;
+  background-color: #edefee;
+  border-radius: 20px;
+  padding: 50px 20px;
+  box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
+}
+
+#booking-title {
+  color: #ee9972;
+  font-size: 58px;
+  margin: 0.5rem 0;
+}

@@ -3,14 +3,16 @@ import Footer from './Footer';
 import {ReactComponent as Logo} from '../assets/Logo.svg';
 
 const About = () => {
-    return (
-        <>
-            <Logo />
-            <Nav />
-            <p>This is my About page</p>
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <header>
+        <Logo />
+        <Nav />
+      </header>
+      <h1>This is my About page</h1>
+      <Footer />
+    </>
+  )
 }
 
 export default About;

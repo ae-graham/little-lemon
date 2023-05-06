@@ -1,93 +1,95 @@
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 h1, h2, p {
-    text-align: center;
+  text-align: center;
 }
 
 h1, h2 {
-    font-family: 'Markazi Text', serif;
+  font-family: 'Markazi Text', serif;
 }
 
-p {
-    font-family: 'Karla', sans-serif;
-    width: 90%;
-    margin: 1rem auto;
+.hero p {
+  font-family: 'Karla', sans-serif;
+  width: 90%;
+  margin: 1rem auto;
 }
 
 
-h1 {
-    color: #ee9972;
-    font-size: 64px;
-    margin: 0.5rem 0;
+.hero h1 {
+  color: #ee9972;
+  font-size: 64px;
+  margin: 0.5rem 0;
 }
 
-h2 {
-    font-size: 40px;
-    margin: 0.5rem 0;
+.hero h2 {
+  font-size: 40px;
+  margin: 0.5rem 0;
 }
 
 section a {
-    border: 1px solid black;
-    border-radius: 15px;
-    background-color: #f4ce14;
-    padding: 5px;
-    display:block;
-    margin: 0 auto;
-    width: 160px;
-    text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #f4ce14;
+  padding: 5px;
+  display:block;
+  margin: 0 auto;
+  width: 160px;
+  text-align: center;
 }
 
 /*HERO STYLES*/
 
 .hero h2, .hero p {
-    color: white;
+  color: white;
 }
 
 .hero {
-    background-color: #495e57;
-    height: 540px;
-    padding-top: 10px;
-    margin-bottom: 100px;
+  background-color: #495e57;
+  height: 540px;
+  padding-top: 10px;
+  margin-bottom: 100px;
 }
 
 .hero img {
-    display: block;
-    margin: 25px auto 0;
-    clip-path: inset(30px 0 30px 0 round 15px); /* crops the image 10px from top and bottom, and adds border radius of 15px*/
+  display: block;
+  margin: 25px auto 0;
+  clip-path: inset(30px 0 30px 0 round 15px); /* crops the image 10px from top and bottom, and adds border radius of 15px*/
 }
 
 /*SPECIALS STYLES*/
 
 .specials {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 } 
 
 .specials img {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    border-radius: 20px 20px 0 0;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px 20px 0 0;
 }
 
 .specials .card {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .specials .card div {
-    background-color: #edefee;
-    border-radius: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
+  background-color: #edefee;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
 }
 
 @media (min-width: 1024px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  /*header {
+    flex-direction: row;
+    justify-content: space-between;
+  }*/
 }

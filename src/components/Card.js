@@ -5,7 +5,7 @@ const Card = (props) => {
         <div>
             <img src={props.photo} alt='photograph of food dish' width='228' height='200' />
             <h2>{props.dish}</h2>
-            <p>{`$${props.price}`}</p>
+            <p style={{color: '#ee9972'}}>{`$${props.price}`}</p>
             <p>{props.description}</p>
             <br></br>
             <p><b>Order a delivery &#128757;</b></p>
