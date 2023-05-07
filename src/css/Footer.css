@@ -1,0 +1,30 @@
+.footer {
+  display: grid;
+  grid-template-rows: 200px 150px;
+  grid-template-columns: 45vw 45vw;
+  margin-top: 20px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#cell_1 {
+  place-self: left;
+  padding-left: 50px;
+  margin-top: 16px;
+}
+
+#cell_3 {
+  padding-left: 50px;
+}
+
+.footer a {
+  color: black;
+  cursor: pointer;
+}
+
+.footer p {
+  text-align: left;
+}

@@ -9,14 +9,9 @@ import {Routes, Route} from 'react-router-dom';
 import salad from './assets/greek salad.jpg';
 import bruschetta from './assets/bruchetta.jpg';
 import dessert from './assets/lemon dessert.jpg'
-import { useState } from "react";
+
 
 function App() {
-  const [availableTimes, setavailableTimes] = useState('17:00');
-
-  const handleAvailableTimes = (e) => {
-    setavailableTimes(e.target.value);
-  }
   
   const specials = [
     {
@@ -47,8 +42,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage specials={specials} />} />
         <Route path='/about' element={<About />} />
-        <Route path='/reservation' element={<Reservations availableTimes={availableTimes} setavailableTimes={handleAvailableTimes}/>} />
+        <Route path='/reservation' element={<Reservations />} />
       </Routes>
+      <hr></hr>
       <Footer />
     </>
   );

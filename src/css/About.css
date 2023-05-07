@@ -1,0 +1,12 @@
+.about img {
+  display: block;
+  position: absolute;
+  left: -20px;
+  clip-path: inset(0 0 0 80px round 15px); /* crops the image 10px from top and bottom, and adds border radius of 15px*/
+}
+
+.about p {
+  font-family: 'Karla', sans-serif;
+  width: 90%;
+  margin: 1rem auto;
+}

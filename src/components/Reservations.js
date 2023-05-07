@@ -2,11 +2,11 @@
 import BookingForm from './BookingForm';
 import '../css/Reservations.css'
 
-const Reservations = (props) => {
+const Reservations = () => {
   return (
     <>
       <h1 id='booking-title'>Bookings</h1>
-      <BookingForm availableTimes={props.availableTimes} setavailableTimes={props.setavailableTimes}/>
+      <BookingForm />
     </>
   )
 }

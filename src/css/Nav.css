@@ -2,13 +2,13 @@ nav {
   font-family: 'Karla', sans-serif;
 }
 
-ul {
+nav ul {
   font-size: 1.5rem;
   list-style-type: none;
   padding-left: 0;
 }
 
-li {
+nav li {
   display: inline;
   margin-left: 20px;
   color: black;
@@ -83,4 +83,10 @@ a {
       margin-top: -10px;
   }
 
+}
+
+@media screen and (min-width: 769px) {
+  .closebtn, .lines {
+    display: none;
+  }
 }

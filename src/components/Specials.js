@@ -4,7 +4,7 @@ import Card from './Card'
 const Specials = (props) => {
   return (
     <section className='specials'>
-      <h2>This week's specials!</h2>
+      <h2 style={{fontSize:'36px'}}>This week's specials!</h2>
       <Link to='/#'>Online Menu</Link>
       <div className='card'>
         {props.specials.map(element => {
