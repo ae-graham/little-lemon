@@ -24,8 +24,6 @@ const Nav = () => {
           <li><Link to='/about' onClick={closeNav}>About</Link></li>
           <li><a href='/#' onClick={closeNav}>Menu</a></li>
           <li><Link to='/reservation' onClick={closeNav}>Reservations</Link></li>
-          <li><a href='/#' onClick={closeNav}>Order Online</a></li>
-          <li><a href='/#' onClick={closeNav}>Login</a></li>
         </ul>
       </nav>
       <span className="lines" onClick={openNav}>&#9776;</span>
