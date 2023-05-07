@@ -15,6 +15,14 @@ const Nav = () => {
     }
   } 
 
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        document.getElementById("myNav").style.width = "auto";
+    } else {
+        document.getElementById("myNav").style.width = "0%"
+    }
+  });
+
   return (
     <>
       <nav id="myNav" className="overlay">

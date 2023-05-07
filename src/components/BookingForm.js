@@ -91,7 +91,7 @@ const BookingForm = () => {
   }
 
   return(
-    <form style={{display: 'grid', maxWidth: '260px', gap: '20px'}} onSubmit={handleSubmit}>    {/*Remember inline styles are written differently in React*/}
+    <form style={{display: 'grid', gap: '20px'}} onSubmit={handleSubmit}>    {/*Remember inline styles are written differently in React*/}
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" name="date" value={values.date} onChange={handleChange}/>
       <label htmlFor="res-time">Choose time</label>

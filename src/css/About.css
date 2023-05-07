@@ -1,7 +1,11 @@
+.about {
+  margin-bottom: 30px;
+}
+
 .about img {
   display: block;
-  position: absolute;
-  left: -20px;
+  position: relative;
+  left: -45px;
   clip-path: inset(0 0 0 80px round 15px); /* crops the image 10px from top and bottom, and adds border radius of 15px*/
 }
 
@@ -9,4 +13,24 @@
   font-family: 'Karla', sans-serif;
   width: 90%;
   margin: 1rem auto;
+}
+
+@media screen and (min-width: 769px) {
+  .about {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .about p {
+    font-family: 'Karla', sans-serif;
+    width: 30%;
+    margin: 70px 0 0 30px;
+    text-align: left;
+    order: 2;
+  }
+
+  .about img {
+    position: static;
+    margin-left: -80px;
+  }
 }
