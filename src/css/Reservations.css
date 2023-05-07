@@ -19,4 +19,8 @@ form {
   form {
     max-width: 500px;
   }
+
+  form a {
+    place-self: center;
+  }
 }

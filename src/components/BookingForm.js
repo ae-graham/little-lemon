@@ -2,9 +2,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
+import {Link} from 'react-router-dom';
 
 
 const BookingForm = () => {
+  const [reservation, setReservation] = useState({})
   const [availableTimes, setavailableTimes] = useState([]);
 
   //-----------API DATA-----------//
@@ -83,7 +85,7 @@ const BookingForm = () => {
   })
 
   const isdisabled = () => {
-    if(values.date  && values.time && values.guests && values.name && values.surname && values.email){
+    if(values.date  && values.time && values.guests && values.firstname && values.lastname && values.email){
         return false
     } else {
         return true
@@ -91,7 +93,7 @@ const BookingForm = () => {
   }
 
   return(
-    <form style={{display: 'grid', gap: '20px'}} onSubmit={handleSubmit}>    {/*Remember inline styles are written differently in React*/}
+    <form style={{display: 'grid', gap: '20px'}} onSubmit={handleSubmit} reservation={reservation}>    {/*Remember inline styles are written differently in React*/}
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" name="date" value={values.date} onChange={handleChange}/>
       <label htmlFor="res-time">Choose time</label>
@@ -140,7 +142,9 @@ const BookingForm = () => {
         value={values.email}
       />
       {touched.email && errors.email ? (<div className='error--field'>{errors.email}</div>) : null}
-      <input type="submit" value="Make Your Reservation" data-testid="submit-button" disabled={isdisabled()}/>
+      <Link to ="/Confirmation" state={{reservation: values}}>
+        <input className='submit-form' type="submit" value="Make Your Reservation" data-testid="submit-button" disabled={isdisabled()}/>
+      </Link>
     </form>
   )
 }
