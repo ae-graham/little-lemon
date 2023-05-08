@@ -9,6 +9,12 @@ form {
   box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
 }
 
+form .error--field {
+  color: red;
+  font-size: 0.75rem;
+  
+}
+
 #booking-title {
   color: #ee9972;
   font-size: 58px;

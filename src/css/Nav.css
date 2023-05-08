@@ -17,6 +17,9 @@ nav li {
 a {
   text-decoration: none;
 }
+nav a:visited {
+  color: inherit;
+}
 
 @media screen and (max-width: 768px) {
   #myNav {

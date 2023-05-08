@@ -59,11 +59,11 @@ const BookingForm = () => {
     validationSchema: Yup.object({
         firstname: Yup.string()
             .max(12, "Must be 12 charachters or less")
-            .min(4, "Must be at least 4 charachters")
+            //.min(4, "Must be at least 4 charachters")
             .required("Required"),
         lastname: Yup.string()
             .max(15, "Must be less than 15 charachters")
-            .min(5, "Must be at least 5 charachters")
+            //.min(5, "Must be at least 5 charachters")
             .required("Required"),
         email: Yup.string().email("Invalid email adress").required("Required")
     }),
@@ -85,7 +85,7 @@ const BookingForm = () => {
   })
 
   const isdisabled = () => {
-    if(values.date  && values.time && values.guests && values.firstname && values.lastname && values.email){
+    if(values.date  && values.time && values.guests && values.firstname && values.lastname && values.email && !errors.email){
         return false
     } else {
         return true
