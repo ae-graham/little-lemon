@@ -36,7 +36,7 @@ function App() {
   ];
   return (
     <>
-      <header style={{width: '90%', margin: '10px auto', maxWidth: '1125px'}}>
+      <header style={{width: '90%', margin: '20px auto', maxWidth: '1125px'}}>
         <Logo />
         <Nav />
       </header>
@@ -45,7 +45,6 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/reservation' element={<Reservations />} />
       </Routes>
-      <hr></hr>
       <Footer />
     </>
   );

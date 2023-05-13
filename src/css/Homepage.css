@@ -17,7 +17,7 @@ h1, h2 {
 .outter-hero {
   background-color: #495e57;
   height: 560px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .hero {
@@ -62,6 +62,8 @@ h1, h2 {
 
 .hero img {
   display: block;
+  width: 228px;
+  height: 344px;
   margin: 25px auto 0;
   clip-path: inset(30px 0 30px 0 round 15px); /* crops the image 10px from top and bottom, and adds border radius of 15px*/
 }
@@ -100,8 +102,7 @@ h1, h2 {
   /*------HERO STYLES----------*/
   
   .outter-hero {
-    height: 270px;
-    margin-bottom: 100px;
+    height: 320px;
   }
 
   .hero {
@@ -121,7 +122,10 @@ h1, h2 {
   }
 
   .hero img {
-    margin: 0 40px 0 0;
+    margin: -50px 40px 0 0;
+    width: 342px;
+    height: 516px;
+    clip-path: inset(70px 0 70px 0 round 15px);
   }
 
   /*--------SPECIALS STYLES--------*/
@@ -140,6 +144,10 @@ h1, h2 {
   .specials .card h2 {
     text-align: center;
     width: 100%;
+  }
+
+  .specials .card-item {
+    width: 30%;
   }
 
 }

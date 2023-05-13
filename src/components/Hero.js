@@ -11,7 +11,7 @@ const Hero = () => {
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
           <Link to='/reservation'>Reserve a Table</Link>
         </div>
-        <img src={panini} alt='Restaurant dish containing paninis' width='228' height='344' />
+        <img src={panini} alt='Restaurant dish containing paninis' />
       </div>
     </section>
   )
