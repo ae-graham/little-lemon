@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Homepage from './components/Homepage'
 import About from './components/About'
 import Reservations from './components/Reservations'
-import Confirmation from './components/Confirmation'
+//import Confirmation from './components/Confirmation'
 import {Routes, Route} from 'react-router-dom';
 import salad from './assets/greek salad.jpg';
 import bruschetta from './assets/bruchetta.jpg';
@@ -36,7 +36,7 @@ function App() {
   ];
   return (
     <>
-      <header>
+      <header style={{width: '90%', margin: '10px auto', maxWidth: '1125px'}}>
         <Logo />
         <Nav />
       </header>
@@ -44,7 +44,6 @@ function App() {
         <Route path='/' element={<Homepage specials={specials} />} />
         <Route path='/about' element={<About />} />
         <Route path='/reservation' element={<Reservations />} />
-        <Route path='/confirmation' element={<Confirmation />} />
       </Routes>
       <hr></hr>
       <Footer />

@@ -6,11 +6,12 @@ nav ul {
   font-size: 1.5rem;
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 nav li {
   display: inline;
-  margin-left: 20px;
+  margin-left: 40px;
   color: black;
 }
 
@@ -21,7 +22,7 @@ nav a:visited {
   color: inherit;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 829px) {
   #myNav {
     transition: 0.5s;
   }
@@ -88,7 +89,7 @@ nav a:visited {
 
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 830px) {
   .closebtn, .lines {
     display: none;
   }

@@ -3,7 +3,7 @@ import '../css/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
+    <footer className='footer' style={{maxWidth: '1125px'}}>
       <div id='cell_1'>
         <img src={logo} alt="logo" width='68' height='120'/>
       </div>

@@ -2,11 +2,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
-import {Link} from 'react-router-dom';
 
 
 const BookingForm = () => {
-  const [reservation, setReservation] = useState({})
+  const [isConfirmed, setConfirmed] = useState(false)
   const [availableTimes, setavailableTimes] = useState([]);
 
   //-----------API DATA-----------//
@@ -37,14 +36,7 @@ const BookingForm = () => {
   };
   //-----API DATA FINISH------//
 
-  useEffect(() => {
-      const fetchData = async() => {
-          const date = new Date()
-          const times = await fetchAPI(date)
-          setavailableTimes(times)
-      }
-      fetchData() // eslint-disable-next-line
-  }, [])
+  
 
   const {values, handleBlur, handleChange, handleSubmit, touched, errors} = useFormik({
     initialValues: {
@@ -67,22 +59,24 @@ const BookingForm = () => {
             .required("Required"),
         email: Yup.string().email("Invalid email adress").required("Required")
     }),
-    onSubmit: async(values, actions) => {
-        const isSubmitted = await submitAPI(values)
-        if(isSubmitted){
-            alert("Reservation submitted successfully")
-            actions.resetForm()
-        } else {
-            alert("An error ocurred, please try again later")
-        }
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-        document.getElementById("res-date").value = ""
-        document.getElementById("res-time").value = ""
-        document.getElementById("guests").value = ""
-        document.getElementById("occasion").value = ""
-        actions.resetForm()
+    onSubmit: (values) => {
+      const isSubmitted = submitAPI(values)
+      if(isSubmitted){
+          setConfirmed(true);
+      } else {
+          alert("An error ocurred, please try again later")
+      }
     }
   })
+
+  useEffect(() => {
+    const fetchData = () => {
+        const date = new Date(values.date) //takes the date selected and with this it creates a new Date object
+        const times = fetchAPI(date)
+        setavailableTimes(times)
+    }
+    fetchData(); // eslint-disable-next-line
+  }, [values.date]) // I track the date selected, so when it changes the useEffect hook is invoked
 
   const isdisabled = () => {
     if(values.date  && values.time && values.guests && values.firstname && values.lastname && values.email && !errors.email){
@@ -93,14 +87,16 @@ const BookingForm = () => {
   }
 
   return(
-    <form style={{display: 'grid', gap: '20px'}} onSubmit={handleSubmit} reservation={reservation}>    {/*Remember inline styles are written differently in React*/}
+    <>
+    <form style={!isConfirmed ? {display: 'grid', gap: '20px'} : {display: 'none'}} onSubmit={handleSubmit}>    {/*Remember inline styles are written differently in React*/}
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" name="date" value={values.date} onChange={handleChange}/>
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time " name='time' value={values.time} onChange={handleChange}>
-        {availableTimes.map((time, index) => (
-          <option key={index} value={time}>{time}</option>
-        ))}
+        {availableTimes.length > 0 ? availableTimes.map((time, index) => {
+          return <option key={index} value={time}>{time}</option>
+          }): <option value=''>--Please choose a date to see available times--</option>
+        }
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input type="number" placeholder="1" min="1" max="10" id="guests" name='guests' value={values.guests} onChange={handleChange}/>
@@ -142,10 +138,21 @@ const BookingForm = () => {
         value={values.email}
       />
       {touched.email && errors.email ? (<div className='error--field'>{errors.email}</div>) : null}
-      <Link to ="/Confirmation" state={{reservation: values}}>
-        <input className='submit-form' type="submit" value="Make Your Reservation" data-testid="submit-button" disabled={isdisabled()}/>
-      </Link>
+      <input className='submit-form' type="submit" value="Make Your Reservation" data-testid="submit-button" disabled={isdisabled()} />
     </form>
+    {isConfirmed ? 
+      <div className='confirmed'>
+        <h1>Your booking is confirmed!</h1>
+        <p>Name: <strong>{values.firstname}</strong></p>
+        <p>Surname: <strong>{values.lastname}</strong></p>
+        <p>Email: <strong>{values.email}</strong></p>
+        <p>Date: <strong>{values.date}</strong></p>
+        <p>Time: <strong>{values.time}</strong></p>
+        <p>Guests: <strong>{values.guests}</strong></p>
+      </div>
+      : null
+    }
+    </>
   )
 }
 

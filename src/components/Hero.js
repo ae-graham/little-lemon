@@ -3,14 +3,16 @@ import {Link} from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className='hero'>
-      <div>
-        <h1>Little Lemon</h1>
-        <h2>Chicago</h2>
-        <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-        <Link to='/reservation'>Reserve a Table</Link>
+    <section className='outter-hero'>
+      <div className='hero'>
+        <div>
+          <h1>Little Lemon</h1>
+          <h2>Chicago</h2>
+          <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+          <Link to='/reservation'>Reserve a Table</Link>
+        </div>
+        <img src={panini} alt='Restaurant dish containing paninis' width='228' height='344' />
       </div>
-      <img src={panini} alt='Restaurant dish containing paninis' width='228' height='344' />
     </section>
   )
 }

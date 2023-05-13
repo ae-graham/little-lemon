@@ -30,3 +30,12 @@ form .error--field {
     place-self: center;
   }
 }
+
+.confirmed {
+  width: 300px;
+  margin: 0 auto 40px;
+  background-color: #edefee;
+  border-radius: 20px;
+  padding: 50px 20px;
+  box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
+}

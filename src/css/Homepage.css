@@ -14,10 +14,20 @@ h1, h2 {
 }
 
 /*------HERO STYLES----------*/
+.outter-hero {
+  background-color: #495e57;
+  height: 560px;
+  margin-bottom: 100px;
+}
+
+.hero {
+  width: 90%;
+  padding-top: 10px;
+  margin: 0 auto;
+}
 
 .hero p {
   font-family: 'Karla', sans-serif;
-  width: 90%;
   margin: 1rem auto;
 }
 
@@ -25,7 +35,7 @@ h1, h2 {
 .hero h1 {
   color: #ee9972;
   font-size: 64px;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 .hero h2 {
@@ -48,12 +58,7 @@ h1, h2 {
   color: white;
 }
 
-.hero {
-  background-color: #495e57;
-  height: 540px;
-  padding-top: 10px;
-  margin-bottom: 100px;
-}
+
 
 .hero img {
   display: block;
@@ -77,6 +82,9 @@ h1, h2 {
 
 .specials .card {
   margin-top: 50px;
+  width: 342px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .specials .card div{
@@ -87,25 +95,29 @@ h1, h2 {
   box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 830px) {
   
   /*------HERO STYLES----------*/
-  .hero h1, h2, .hero p {
-    text-align: left;
-    padding-left: 30px;
-    width: 80%;
-    margin: 0;
+  
+  .outter-hero {
+    height: 270px;
+    margin-bottom: 100px;
   }
-
 
   .hero {
     display: flex;
-    height: 270px;
-    margin-bottom: 50px;
+    max-width: 1125px;
+    margin: 0 auto;
+  }
+
+  .hero h1, h2, .hero p {
+    text-align: left;
+    width: 70%;
+    margin: 0;
   }
 
   .hero a {
-    margin: 20px 30px;
+    margin: 20px 0;
   }
 
   .hero img {
@@ -115,13 +127,19 @@ h1, h2 {
   /*--------SPECIALS STYLES--------*/
 
   .specials {
-    width: 100%;
     margin: 0 auto;
+    width: 90%;
   } 
 
   .specials .card {
     display: flex;
     gap: 40px;
+    width: 100%;
+  }
+
+  .specials .card h2 {
+    text-align: center;
+    width: 100%;
   }
 
 }
