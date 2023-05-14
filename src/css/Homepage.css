@@ -85,6 +85,10 @@ h1, h2 {
   margin: 0 auto;
 } 
 
+.specials h2 {
+  font-size: 40px;
+}
+
 .specials img {
   width: 100%;
   margin: 0 auto;
@@ -171,7 +175,12 @@ h1, h2 {
   .specials {
     margin: 0 auto;
     width: 90%;
-  } 
+  }
+  
+  .specials h2 {
+    font-size: 52px;
+    margin: 0.75rem 0;
+  }
 
   .specials .card {
     display: flex;
