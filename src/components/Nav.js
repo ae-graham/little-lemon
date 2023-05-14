@@ -8,7 +8,7 @@ const Nav = () => {
   }
     
   function closeNav() {
-    if (window.innerWidth < 769) {
+    if (window.innerWidth < 830) {
         document.getElementById("myNav").style.width = "0%";
     } else {
         document.getElementById("myNav").style.width = "auto";

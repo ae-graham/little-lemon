@@ -24,8 +24,8 @@ const Footer = () => {
           <article>
             <h3 style={{fontSize: '1.2rem'}}>Contact Info</h3>
             <address>
-              <p>Sydney</p>
-              <p>Australia NSW</p>
+              <p>150 N Michigan Ave Ste 700, Chicago, IL<br></br>
+              Zip: 60601-0003</p>
             </address>
           </article>
         </div>

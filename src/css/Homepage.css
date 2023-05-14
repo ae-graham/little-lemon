@@ -29,6 +29,7 @@ h1, h2 {
 .hero p {
   font-family: 'Karla', sans-serif;
   margin: 1rem auto;
+  font-size: 18px;
 }
 
 
@@ -44,7 +45,6 @@ h1, h2 {
 }
 
 .hero a, .specials a {
-  border: 1px solid black;
   border-radius: 15px;
   background-color: #f4ce14;
   padding: 5px;
@@ -52,6 +52,16 @@ h1, h2 {
   margin: 0 auto;
   width: 160px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hero a:hover, .specials a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.hero a:visited, .specials a:visited {
+  color: black;
 }
 
 .hero h2, .hero p {
@@ -82,7 +92,7 @@ h1, h2 {
   border-radius: 20px 20px 0 0;
 }
 
-.specials .card {
+.specials .card{
   margin-top: 50px;
   width: 342px;
   margin-right: auto;
@@ -96,6 +106,21 @@ h1, h2 {
   margin-bottom: 30px;
   box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
 }
+
+/*--------TESTIMONIALS STYLES---------*/
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.review img {
+  border-radius: 50%;
+  border: 2px solid #495e57;
+}
+
 
 @media (min-width: 830px) {
   
@@ -111,14 +136,27 @@ h1, h2 {
     margin: 0 auto;
   }
 
-  .hero h1, h2, .hero p {
+  .hero h2, .hero p {
     text-align: left;
     width: 70%;
     margin: 0;
   }
 
+  .hero h1 {
+    width: 90%;
+    text-align: left;
+    margin: 0;
+  }
+
   .hero a {
     margin: 20px 0;
+    width: 180px;
+    font-size: 1.2rem;
+  }
+
+  .specials a {
+    width: 180px;
+    font-size: 1.2rem;
   }
 
   .hero img {
@@ -141,12 +179,32 @@ h1, h2 {
     width: 100%;
   }
 
-  .specials .card h2 {
+  .specials .card-item h2 {
     text-align: center;
     width: 100%;
   }
 
   .specials .card-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .specials h2 {
+    text-align: left;
+  }
+
+  /*--------TESTIMONIALS STYLES---------*/
+
+  .card-testimonial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .review {
     width: 30%;
   }
 
