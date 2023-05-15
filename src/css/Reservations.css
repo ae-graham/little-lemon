@@ -1,3 +1,7 @@
+#flex-container {
+  
+}
+
 form {
   max-width: 260px;
   font-family: 'Karla', sans-serif;
@@ -5,13 +9,19 @@ form {
   margin: 40px auto;
   background-color: #edefee;
   border-radius: 20px;
-  padding: 50px 20px;
+  padding: 30px 20px;
   box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
+}
+
+.formgroup-1, .formgroup-2 {
+  display: grid;
+  gap: 20px;
 }
 
 form .error--field {
   color: red;
   font-size: 0.75rem;
+  margin-top: -0.75rem;
   
 }
 
@@ -19,15 +29,69 @@ form .error--field {
   color: #ee9972;
   font-size: 58px;
   margin: 0.5rem 0;
+  background-color: #495e57;
 }
 
-@media screen and (min-width: 769px) {
+form input[type=date],
+form input[type=text],
+form input[type=number],
+form input[type=email] {
+  border: 1px solid grey;
+  border-radius: 15px;
+  /*box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);*/
+  padding: 5px;
+}
+
+form input[type=number] {
+  width: 70px;
+  padding: 5px 10px;
+}
+
+form input[type=submit] {
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: #f4ce14;
+  padding: 5px;
+  display:block;
+  margin: 15px auto 0;
+  width: 160px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+form input[type=submit]:enabled:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+form label {
+  margin-bottom: -10px;
+}
+
+@media screen and (min-width: 650px) {  
   form {
     max-width: 500px;
+    grid-template-columns: 1fr 1fr;
   }
 
   form a {
     place-self: center;
+  }
+
+}
+
+@media screen and (min-width: 950px) {
+  #reservation-img {
+    width: 346px;
+    height: 231px;
+    background-image: url('../assets/restaurant.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  form {
+    margin: 40px 0;
   }
 }
 
@@ -39,3 +103,4 @@ form .error--field {
   padding: 50px 20px;
   box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
 }
+

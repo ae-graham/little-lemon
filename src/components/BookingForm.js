@@ -89,56 +89,60 @@ const BookingForm = () => {
   return(
     <>
     <form style={!isConfirmed ? {display: 'grid', gap: '20px'} : {display: 'none'}} onSubmit={handleSubmit}>    {/*Remember inline styles are written differently in React*/}
-      <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" name="date" value={values.date} onChange={handleChange}/>
-      <label htmlFor="res-time">Choose time</label>
-      <select id="res-time " name='time' value={values.time} onChange={handleChange}>
-        {availableTimes.length > 0 ? availableTimes.map((time, index) => {
-          return <option key={index} value={time}>{time}</option>
-          }): <option value=''>--Please choose a date to see available times--</option>
-        }
-      </select>
-      <label htmlFor="guests">Number of guests</label>
-      <input type="number" placeholder="1" min="1" max="10" id="guests" name='guests' value={values.guests} onChange={handleChange}/>
-      <label htmlFor="occasion">Occasion</label>
-      <select id="occasion" value={values.occasion} onChange={handleChange}>
-          <option value=''>--Please choose an occasion--</option>
-          <option value='Birthday'>Birthday</option>
-          <option value='Anniversary'>Anniversary</option>
-      </select>
-      <label htmlFor="firstname">Name</label>
-      <input
-        type="text"
-        placeholder='Name'
-        id='firstname'
-        name='firstname'
-        onChange={handleChange}
-        onBlur={handleBlur}
-        value={values.firstname}
-      />
-      {touched.firstname && errors.firstname ? (<div className='error--field'>{errors.firstname}</div>) : null}
-      <label htmlFor="lastname">Lastname</label>
-      <input
-        type="text"
-        name='lastname'
-        placeholder='Lastname'
-        onChange={handleChange}
-        onBlur={handleBlur}
-        value={values.lastname}
-      />
-      {touched.lastname && errors.lastname ? (<div className='error--field'>{errors.lastname}</div>) : null}
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        name='email'
-        className='email'
-        placeholder='John@....'
-        onChange={handleChange}
-        onBlur={handleBlur}
-        value={values.email}
-      />
-      {touched.email && errors.email ? (<div className='error--field'>{errors.email}</div>) : null}
-      <input className='submit-form' type="submit" value="Make Your Reservation" data-testid="submit-button" disabled={isdisabled()} />
+      <div className='formgroup-1'>
+        <label htmlFor="res-date">Choose date</label>
+        <input type="date" id="res-date" name="date" value={values.date} onChange={handleChange}/>
+        <label htmlFor="res-time">Choose time</label>
+        <select id="res-time " name='time' value={values.time} onChange={handleChange}>
+          {availableTimes.length > 0 ? availableTimes.map((time, index) => {
+            return <option key={index} value={time}>{time}</option>
+            }): <option value=''>--Please choose a date first--</option>
+          }
+        </select>
+        <label htmlFor="guests">Number of guests</label>
+        <input type="number" placeholder="1" min="1" max="10" id="guests" name='guests' value={values.guests} onChange={handleChange}/>
+        <label htmlFor="occasion">Occasion</label>
+        <select id="occasion" value={values.occasion} onChange={handleChange}>
+            <option value=''>--Please choose an occasion--</option>
+            <option value='Birthday'>Birthday</option>
+            <option value='Anniversary'>Anniversary</option>
+        </select>
+      </div>
+      <div className='formgroup-2'>
+        <label htmlFor="firstname">Name</label>
+        <input
+          type="text"
+          placeholder='Name'
+          id='firstname'
+          name='firstname'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.firstname}
+        />
+        {touched.firstname && errors.firstname ? (<div className='error--field'>&#9888; {errors.firstname}</div>) : null}
+        <label htmlFor="lastname">Lastname</label>
+        <input
+          type="text"
+          name='lastname'
+          placeholder='Lastname'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.lastname}
+        />
+        {touched.lastname && errors.lastname ? (<div className='error--field'>&#9888; {errors.lastname}</div>) : null}
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          name='email'
+          className='email'
+          placeholder='John@....'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.email}
+        />
+        {touched.email && errors.email ? (<div className='error--field'>&#9888; {errors.email}</div>) : null}
+        <input className='submit-form' type="submit" value="Make Your Reservation" data-testid="submit-button" disabled={isdisabled()} />
+      </div>
     </form>
     {isConfirmed ? 
       <div className='confirmed'>

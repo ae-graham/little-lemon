@@ -5,8 +5,11 @@ import '../css/Reservations.css'
 const Reservations = () => {
   return (
     <>
-      <h1 id='booking-title'>Bookings</h1>
-      <BookingForm />
+      <h1 id='booking-title'>Reservations</h1>
+      <div id='flex-container' style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '40px', width: '90%', margin: '0 auto', maxWidth: '1125px'}}>
+        <BookingForm />
+        <div id='reservation-img'></div>
+      </div>
     </>
   )
 }

@@ -29,8 +29,8 @@ const Footer = () => {
             </address>
           </article>
         </div>
-        <div>
-          <article className="">
+        <div id='cell_4'>
+          <article>
             <h3 style={{fontSize: '1.2rem'}}>Social Media</h3>
             <ul>
               <li><a href="https://en-gb.facebook.com/" target="_blank" rel="noreferrer">Facebook</a></li>
