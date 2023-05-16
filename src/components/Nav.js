@@ -30,7 +30,7 @@ const Nav = () => {
         <ul className='main-nav'>
           <li><Link to='/' onClick={closeNav}><strong>Home</strong></Link></li>
           <li><Link to='/about' onClick={closeNav}><strong>About</strong></Link></li>
-          <li><a href='/#' onClick={closeNav}><strong>Menu</strong></a></li>
+          <li><Link to='/menu' onClick={closeNav}><strong>Menu</strong></Link></li>
           <li><Link to='/reservation' onClick={closeNav}><strong>Reservations</strong></Link></li>
         </ul>
       </nav>

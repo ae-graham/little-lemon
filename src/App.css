@@ -6,5 +6,15 @@
   margin: 0;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
 
 

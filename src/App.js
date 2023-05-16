@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Homepage from './components/Homepage'
 import About from './components/About'
+import Menu from './components/Menu';
 import Reservations from './components/Reservations'
 //import Confirmation from './components/Confirmation'
 import {Routes, Route} from 'react-router-dom';
@@ -35,18 +36,21 @@ function App() {
     }
   ];
   return (
-    <>
-      <header style={{width: '90%', margin: '20px auto', maxWidth: '1125px'}}>
-        <Logo />
-        <Nav />
-      </header>
-      <Routes>
-        <Route path='/' element={<Homepage specials={specials} />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/reservation' element={<Reservations />} />
-      </Routes>
+    <div className='app-container'>
+      <div className='main-container'>
+        <header style={{width: '90%', margin: '20px auto', maxWidth: '1125px'}}>
+          <Logo />
+          <Nav />
+        </header>
+        <Routes>
+          <Route path='/' element={<Homepage specials={specials} />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/reservation' element={<Reservations />} />
+        </Routes>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

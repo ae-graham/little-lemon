@@ -1,6 +1,3 @@
-#flex-container {
-  
-}
 
 form {
   max-width: 260px;
@@ -84,6 +81,7 @@ form label {
   #reservation-img {
     width: 346px;
     height: 231px;
+    border-radius: 15px;
     background-image: url('../assets/restaurant.jpg');
     background-position: center;
     background-size: cover;
@@ -96,11 +94,11 @@ form label {
 }
 
 .confirmed {
-  width: 300px;
-  margin: 0 auto 40px;
+  width: 350px;
+  margin: 40px 0 40px;
   background-color: #edefee;
   border-radius: 20px;
-  padding: 50px 20px;
+  padding: 30px 20px;
   box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 14px;
 }
 

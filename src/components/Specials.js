@@ -5,7 +5,7 @@ const Specials = (props) => {
   return (
     <section className='specials' style={{maxWidth: '1125px'}}>
       <h2>This week's specials!</h2>
-      <Link to='/#'><strong>Online Menu</strong></Link>
+      <Link to='/menu'><strong>Online Menu</strong></Link>
       <div className='card'>
         {props.specials.map((element, index) => {
           return(
