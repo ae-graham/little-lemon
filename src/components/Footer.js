@@ -1,5 +1,6 @@
 import logo from '../assets/Asset 20@4x.png';
 import '../css/Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -12,9 +13,9 @@ const Footer = () => {
           <article className=''>
             <h3 style={{fontSize: '1.2rem'}}>Doormat Navigation</h3>
             <ul>
-              <li>About</li>
-              <li>Menu</li>
-              <li>Reservations</li>
+              <li><Link to='/about' >About</Link></li>
+              <li><Link to='/menu' >Menu</Link></li>
+              <li><Link to='/reservation' >Reservations</Link></li>
               <li>Order Online</li>
               <li>Login</li>
             </ul>

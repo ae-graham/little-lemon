@@ -2,7 +2,6 @@
 form {
   max-width: 260px;
   font-family: 'Karla', sans-serif;
-  width: 90%;
   margin: 40px auto;
   background-color: #edefee;
   border-radius: 20px;
@@ -59,6 +58,7 @@ form input[type=submit] {
 form input[type=submit]:enabled:hover {
   transform: translateY(-1px);
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 form label {
@@ -86,6 +86,10 @@ form label {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  #flex-container {
+    gap: 40px;
   }
 
   form {
