@@ -11,6 +11,7 @@ import {Routes, Route} from 'react-router-dom';
 import salad from './assets/greek salad.jpg';
 import bruschetta from './assets/bruchetta.jpg';
 import dessert from './assets/lemon dessert.jpg'
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className='app-container'>
       <div className='main-container'>
+        <ScrollToTop />
         <header style={{width: '90%', margin: '20px auto', maxWidth: '1125px'}}>
           <Logo />
           <Nav />
