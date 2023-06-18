@@ -12,15 +12,13 @@ nav ul {
 nav li {
   display: inline;
   margin-left: 40px;
-  color: #818181;
 }
 
-a {
+nav a {
+  color: #818181;
   text-decoration: none;
 }
-nav a:visited {
-  color: inherit;
-}
+
 
 nav a:hover {
   color: #ee9972;

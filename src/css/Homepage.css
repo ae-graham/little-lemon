@@ -47,6 +47,8 @@ h1, h2 {
 .hero a, .specials a {
   border-radius: 15px;
   background-color: #f4ce14;
+  color: black;
+  text-decoration: none;
   padding: 5px;
   display:block;
   margin: 0 auto;
